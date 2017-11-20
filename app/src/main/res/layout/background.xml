@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/my_button_bg"
+    android:layout_marginBottom="59dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginStart="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="90dp"
+    android:id="@+id/Background_RL"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/B_HSV"
+        android:layout_height="60dp"
+        android:background="@color/cardview_dark_background">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/B_HSV_LL" />
+    </HorizontalScrollView>
+
+
+
+    <FrameLayout
+        android:layout_below="@+id/B_HSV"
+        android:id="@+id/b_framelayout"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/B_SV_GV"
+            android:numColumns="auto_fit"
+            android:columnWidth="90dp"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp"
+            android:gravity="center"
+            android:stretchMode="columnWidth">
+
+        </GridView>
+    </FrameLayout>
+
+</RelativeLayout>

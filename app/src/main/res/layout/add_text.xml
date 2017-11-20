@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:inputType="textPersonName"
+        android:background="#fff"
+        android:ems="10"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="#000"
+        android:hint="Write here"
+        android:layout_marginTop="355dp"
+        android:textColorHint="#000"
+        android:fontFamily="serif"
+        android:textSize="15sp"/>
+
+    <GridView
+        android:layout_alignTop="@+id/text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/color_gridview"
+        android:background="@drawable/color_grid_bg"
+        android:visibility="invisible"
+        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:numColumns="auto_fit"
+        android:columnWidth="40dp"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
+        android:gravity="center"
+        android:stretchMode="columnWidth"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:layout_above="@+id/color_gridview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:foreground="@mipmap/kliponiousgreentick"
+        android:background="@drawable/add_text_bg"
+        android:layout_marginBottom="201dp"
+        android:id="@+id/text_done" />
+
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:id="@+id/font_family_spinner"
+        android:background="@drawable/add_text_bg"/>
+
+    <Spinner
+        android:layout_width="0dp"
+        android:layout_weight="2.5"
+        android:layout_height="match_parent"
+        android:id="@+id/font_size_spinner"
+        android:background="@drawable/add_text_bg"/>
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:id="@+id/color_LL"
+        android:layout_width="0dp"
+        android:layout_weight="2.5"
+        android:background="@drawable/add_text_bg">
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/textView2"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="19dp"
+            android:background="#000"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/left_button_small"
+            android:rotation="270"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="6dp"
+            android:id="@+id/imageView6" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

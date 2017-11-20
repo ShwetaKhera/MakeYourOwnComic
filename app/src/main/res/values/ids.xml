@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="cloud_1" type="id" />
+    <item name="circle" type="id" />
+    <item name="circle_1" type="id"/>
+    <item name="rectangle_1" type="id"/>
+    <item name="short_1" type="id"/>
+
+    <item name="homer_1" type="id" />
+    <item name="batman_1" type="id" />
+
+    <item name="city_1" type="id" />
+    <item name="house_1" type="id" />
+
+</resources>

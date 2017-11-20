@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_blank_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#fff"
+    android:onClick="onClick"
+    android:animateLayoutChanges="true"
+    tools:context="com.example.shweta.makeyourowncomic.Blank_page">
+
+    <com.example.shweta.makeyourowncomic.RoundedImageView
+        android:id="@+id/add_charac"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="onClick"
+        android:src="@drawable/all_heroes_combined"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.example.shweta.makeyourowncomic.RoundedImageView
+        android:id="@+id/add_dialog"
+        android:layout_height="60dp"
+        android:onClick="onClick"
+        android:src="@drawable/image1"
+        android:layout_width="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/Story_name"
+        android:layout_toEndOf="@+id/Story_name"
+        android:id="@+id/Page_No"
+        />
+
+    <TextView
+        android:id="@+id/Story_name"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/final_done"
+        android:layout_width="220dp" />
+
+    <ImageButton
+        app:srcCompat="@mipmap/kliponiousgreentick"
+        android:id="@+id/final_done"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <RelativeLayout
+        android:id="@+id/DrawingArea"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="14dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/background_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/capital_r_before"
+        android:layout_below="@+id/width_button"
+        android:layout_alignRight="@+id/width_button"
+        android:layout_alignEnd="@+id/width_button"
+        android:layout_marginTop="15dp"
+        android:id="@+id/rotation_button"
+        android:visibility="invisible"/>
+
+    <SeekBar
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:max="10"
+        android:progress="3"
+        android:id="@+id/height_seekbar"
+        android:layout_alignTop="@+id/height_button"
+        android:layout_toRightOf="@+id/height_button"
+        android:layout_toEndOf="@+id/height_button"
+        android:background="@drawable/seekbar_bg"
+        android:visibility="invisible"
+        android:focusableInTouchMode="true" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/capital_w_before"
+        android:id="@+id/width_button"
+        android:layout_below="@+id/height_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:visibility="invisible"/>
+
+    <SeekBar
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_height="30dp"
+        android:max="10"
+        android:progress="3"
+        android:layout_above="@+id/rotation_button"
+        android:layout_toRightOf="@+id/width_button"
+        android:layout_toEndOf="@+id/width_button"
+        android:id="@+id/width_seekbar"
+        android:layout_width="300dp"
+        android:background="@drawable/seekbar_bg"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/capital_b_before"
+        android:layout_marginTop="11dp"
+        android:id="@+id/brightness_button"
+        android:layout_below="@+id/rotation_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
+
+    <SeekBar
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:max="10"
+        android:progress="3"
+        android:layout_above="@+id/brightness_button"
+        android:layout_toRightOf="@+id/rotation_button"
+        android:layout_toEndOf="@+id/rotation_button"
+        android:id="@+id/rotation_seekbar"
+        android:visibility="invisible"
+        android:background="@drawable/seekbar_bg"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/capital_h_before"
+        android:id="@+id/height_button"
+        android:layout_marginTop="58dp"
+        android:layout_alignTop="@+id/DrawingArea"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
+
+    <SeekBar
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:max="10"
+        android:progress="3"
+        android:layout_alignTop="@+id/brightness_button"
+        android:layout_toRightOf="@+id/brightness_button"
+        android:layout_toEndOf="@+id/brightness_button"
+        android:id="@+id/brightness_seekbar"
+        android:visibility="invisible"
+        android:background="@drawable/seekbar_bg"/>
+
+    <Button
+        android:text="Set Background "
+        android:id="@+id/background_btn"
+        android:layout_height="30dp"
+        android:layout_width="400dp"
+        android:background="@drawable/my_button_bg"
+        android:textColor="@color/black"
+        android:onClick="onClick"
+        android:layout_below="@+id/Page_No"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Add Text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/add_text_button"
+        android:textColor="#000"
+        android:background="@drawable/add_text_button"
+        android:visibility="invisible"/>
+
+
+    <Button
+        android:text="Edit Text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/edit_text_button"
+        android:textColor="#000"
+        android:background="@drawable/add_text_button"
+        android:visibility="invisible"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_place"
+        class="com.example.shweta.makeyourowncomic.Plain"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/Page_No"
+        android:layout_alignEnd="@+id/Page_No" />
+
+
+</RelativeLayout>
